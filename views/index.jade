@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title} page
+  form(name="add-post", method="post", action="/users")
+        div.input
+            span.label Title
+            input(type="text", name="title")
+        div.input
+            span.label Text
+            textarea(name="text")
+        div.input
+            span.label Author
+            input(type="text", name="author")
+        div.actions
+            input(type="submit", value="add")
